@@ -17,7 +17,7 @@ class App {
      * Detects the current page path and initializes the appropriate controller, model, and view.
      */
     constructor() {
-        let path = window.location.pathname;
+        let path = window.location.pathname.toLowerCase();
         console.log("Current Path:", path);
 
         // Check the path to load the appropriate controller/view
@@ -26,7 +26,7 @@ class App {
              * Initializes the Poke Bowl customization page (this corresponds to '/').
              */
             case "/":
-            case "PokePark/":
+            case "/pokepark/":
                 console.log("Loading PokeBowl index...");
                 new PokeBowlController(new PokeBowlModel(selectData), new PokeBowlView());
                 break;
@@ -34,7 +34,9 @@ class App {
             /**
              * Initializes the Checkout page (this corresponds to '/checkout').
              */
-            case "PokePark/checkout":
+            case "/checkout":
+            case "/pokepark/checkout":
+
                 new CheckoutController(new CheckoutModel(checkoutData), new CheckoutView());
                 break;
             
