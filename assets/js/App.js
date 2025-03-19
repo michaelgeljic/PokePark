@@ -34,8 +34,8 @@ class App {
             /**
              * Initializes the Checkout page (this corresponds to '/checkout').
              */
-            case "/checkout":
-            case "/pokepark/checkout":
+            case "/checkout.html":
+            case "/pokepark/checkout.html":
 
                 new CheckoutController(new CheckoutModel(checkoutData), new CheckoutView());
                 break;
