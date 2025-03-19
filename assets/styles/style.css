@@ -1,0 +1,660 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #26547c;
+}
+p {
+  color: #444;
+  line-height: 25px;
+}
+
+#tuna, #salmon, #tofu{
+  width: 40%;
+  padding-bottom: 20%;
+}
+
+#corn, #edamame, #jalapenos, #mango, #veggies{
+
+  width: 30%;
+  padding-bottom: 28%;
+}
+#div-selects {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+#div-selects label {
+  font-weight: bold;
+  color: #26547c;
+}
+
+#div-selects select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Poke Bowl Preview Styling */
+#preview-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Poke Bowl Preview Styling */
+#preview-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Ensures it stays the correct size */
+  height: 300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ingredient {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%; /* Ensures ingredients are proportional */
+  transform: translate(-50%, -50%); /* Centers the image */
+}
+
+.hidden {
+  display: none; /* Initially hides all ingredients */
+}
+
+/* Maintain consistency with the rest of the layout */
+
+
+
+.container {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+.navbar {
+  position: fixed; /* Makes the navbar fixed */
+  top: 0; /* Positions it at the top */
+  left: 0; /* Aligns to the left */
+  width: 100%; /* Ensures it spans the full width */
+  z-index: 1000; /* Ensures it's above other elements */
+  background-color: #f8f9fa; /* Ensures visibility with a light background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  padding-bottom: 10px;
+}
+
+#delivery {
+  margin-top: 8%;
+  margin-bottom: 4%;
+}
+
+#delivery h2 {
+  margin-bottom: 20px;
+  color: #26547c;
+  font-weight: bold;
+}
+
+form .form-label {
+  font-weight: bold;
+  color: #444;
+}
+
+form .btn-primary {
+  background-color: #ef476f;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+form .btn-primary:hover {
+  background-color: #d64557;
+}
+
+.container.half-width {
+  padding: 2% 0 2% 0;
+}
+
+header {
+  padding-bottom: 50px;
+}
+header,
+.intro-section {
+  background-color: #ffd166;
+  color: #26547c;
+}
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 20%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 20%;
+}
+.logo span {
+  font-size: 30px;
+  font-weight: 900;
+  color: #ef476f;
+  font-family: "Berkshire Swash", cursive;
+}
+.menu-box {
+  width: 75%;
+}
+.menu-box ul {
+  float: right;
+}
+.menu-box ul li {
+  display: inline-block;
+}
+.menu-box ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px 20px;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+.menu-box .active {
+  color: #ef476f;
+}
+.half-width {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-img img {
+  width: 100%;
+  margin-left: 14px;
+}
+.intro-wrap {
+  padding-top: 2em;
+  padding-bottom: 8em;
+}
+.intro-title {
+  width: 50%;
+}
+.intro-title h1 {
+  color: #363958;
+  font-size: 70px;
+  line-height: 80px;
+  margin-bottom: 20px;
+}
+.intro-title span {
+  display: block;
+}
+.span-color {
+  color: #ef476f;
+}
+.intro-title p {
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.link-button {
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(90deg, #51bb6b, #06d6a0);
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.about-section {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.about-img {
+  width: 60%;
+}
+.about-img img {
+  width: 80%;
+}
+.about-title {
+  color: #444;
+  width: 45%;
+}
+.about-title h2 {
+  font-size: 50px;
+  margin-bottom: 2rem;
+}
+.about-title p {
+  margin-bottom: 8rem;
+  text-align: justify;
+}
+
+.recipie-section {
+  background-color: #ef476f;
+  padding-bottom: 10%;
+}
+
+.recipie-header {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.recipie-header h1 {
+  color: #ffffff;
+  font-size: 45px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.recipie-header p {
+  color: white;
+}
+
+.recipie-box span {
+  color: #363958;
+}
+.recipie-wrap {
+  padding: 20px 0;
+  overflow: hidden;
+  display: flex;
+}
+.recipie-box {
+  width: 25%;
+  padding: 2%;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  margin: auto;
+  justify-items: center;
+  background-color: white;
+}
+.recipie-box h2 {
+  font-size: 23px;
+}
+
+.recipie-box img {
+  width: 100%;
+  border-radius: 20px;
+}
+.recipie-box h2 {
+  margin: 15px 0;
+}
+.recipie-box p {
+  width: 100%;
+  text-align: justify;
+}
+.delivery-header {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.delivery-header h1 {
+  color: #444;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.delivery-box span {
+  color: #363958;
+}
+.delivery-wrap {
+  padding: 20px 0;
+  overflow: hidden;
+}
+.delivery-box {
+  width: 25%;
+  padding: 2%;
+  text-align: center;
+}
+
+.delivery-box img {
+  width: 100%;
+  height: 300px;
+}
+.delivery-box h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.delivery-box p {
+  width: 100%;
+  text-align: justify;
+}
+.social-wrap {
+  margin: 5rem auto;
+  padding: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px 5px;
+  border-radius: 20px;
+  background-color: #ffd166;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Add spacing between icons and iframe */
+}
+
+.social-wrap h1 {
+  font-size: 100px;
+  padding: 10px;
+}
+
+.social-box p {
+  color: #26547c;
+}
+
+/* General Icon Style */
+.social-box i {
+  color: #26547c; /* Set the default color for icons */
+  transition: color 0.3s ease; /* Add smooth transition for hover effects */
+}
+
+/* Alternatively, Style Links Wrapping the Icons */
+.social-box a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+.social-box a i {
+  color: #26547c;
+}
+
+.social-box a:hover i {
+  color: #51bb6b; /* Change icon color when link is hovered */
+}
+
+.social-box {
+  width: 100%; /* Allow full width */
+  text-align: center; /* Center the iframe */
+}
+
+.social-box iframe {
+  margin-top: 20px; /* Add spacing between the icons and iframe */
+  width: 600px; /* Set explicit width */
+  height: 450px; /* Set explicit height */
+  border: none; /* Remove iframe border */
+  border-radius: 10px; /* Optional rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.icon-box {
+  margin-left: 10%;
+  display: grid; /* Use a grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Two icons per row */
+  gap: 20px; /* Add spacing between the icons */
+}
+
+footer {
+  background-color: #bdcedd;
+  text-align: center;
+  padding: 1rem 0;
+}
+footer h1 {
+  margin-bottom: 2rem;
+  color: #ef476f;
+}
+footer h1 span {
+  color: #666;
+}
+footer p {
+  color: #26547c;
+  margin-bottom: 2rem;
+}
+footer span {
+  color: #000000;
+}
+.checkout-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px 0; /* Pushes the form down to avoid the navbar */
+  background-color:#ffd166; /* Light background to match theme */
+}
+
+.checkout-box {
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+              rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.checkout-box h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ef476f;
+  text-align: center;
+}
+
+.checkout-box p {
+  font-size: 16px;
+  color: #444;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.checkout-form fieldset {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.checkout-form legend {
+  font-size: 18px;
+  font-weight: bold;
+  color: #26547c;
+}
+
+.checkout-form .form-label {
+  font-weight: bold;
+  color: #26547c;
+}
+
+.checkout-form .form-control {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+
+
+.checkout-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ef476f; /* Matching theme color */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.unsupported{
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+  font-weight: bold;
+
+}
+
+.unsupported p{
+  margin-top: 20px;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 1250px) {
+  /* Header Adjustments */
+  .header-wrap {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: center;
+    gap: 20px;
+  }
+  .logo img {
+    width: 30%; /* Resize logo for mobile */
+  }
+  .menu-box ul {
+    flex-direction: column; /* Stack menu items vertically */
+    text-align: center;
+    gap: 10px;
+  }
+  .menu-box ul li a {
+    padding: 10px 0; /* Reduce menu item padding */
+    font-size: 16px; /* Slightly smaller font size */
+  }
+
+  /* Intro Section Adjustments */
+  .intro-wrap {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+    text-align: center; /* Center-align text for readability */
+    gap: 20px;
+  }
+  .intro-title h1 {
+    font-size: 28px; /* Reduce font size */
+    line-height: 36px;
+  }
+  .intro-title p {
+    font-size: 14px; /* Reduce paragraph font size */
+    width: 100%; /* Full width on mobile */
+  }
+  .intro-img {
+    width: 80%;
+    margin-right: 20px;
+
+
+  }
+  
+  
+
+  .link-button {
+    padding: 10px 20px; /* Smaller button size */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  /* About Section Adjustments */
+  .about-section {
+    padding: 30px 20px; /* Reduced padding */
+    text-align: center; /* Center-align content */
+  }
+  .about-img {
+    width: 100%; /* Full width for image */
+    margin-bottom: 20px;
+  }
+  .about-title {
+    width: 100%; /* Full width for content */
+  }
+  .about-title h2 {
+    font-size: 28px; /* Smaller heading */
+  }
+  .about-title p {
+    font-size: 14px; /* Reduce paragraph font size */
+  }
+  .about-title .link-button {
+    padding: 8px 18px; /* Smaller button */
+    font-size: 14px;
+  }
+
+  /* Recipe Section Adjustments */
+  .recipie-wrap {
+    flex-direction: column; /* Stack recipe cards vertically */
+    gap: 20px; /* Add spacing between cards */
+  }
+  .recipie-box {
+    width: 100%; /* Full width for recipe cards */
+  }
+  .recipie-box img {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .recipie-box h2 {
+    font-size: 20px;
+  }
+  .recipie-box p {
+    font-size: 12px;
+    width: 85%;
+  }
+
+  .recipie-header p {
+    font-size: 15px;
+  }
+  /* Delivery Section Adjustments */
+  .delivery-wrap {
+    flex-direction: column; /* Stack delivery cards vertically */
+    gap: 20px;
+  }
+  .delivery-box {
+    width: 100%;
+  }
+  .delivery-box img {
+    height: auto; /* Allow image to resize naturally */
+  }
+
+  /* Social Section Adjustments */
+  .social-wrap {
+    flex-direction: column; /* Stack social stats vertically */
+    gap: 20px;
+  }
+  .social-wrap h1 {
+    font-size: 40px;
+  }
+  .social-box iframe {
+    margin-top: 20px;
+    width: 100%; /* Make it responsive */
+    max-width: 800px; /* Limit maximum width */
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .icon-box {
+    margin-left: 4%;
+  }
+
+  .delivery-section h2{
+    font-size: 22px;
+    margin-left: 10px;
+  }
+
+
+
+  /* Footer Adjustments */
+  footer {
+    padding: 20px; /* Reduce padding for footer */
+  }
+  footer h1 {
+    font-size: 22px; /* Adjust footer heading size */
+  }
+  footer p,
+  footer span {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokePark</title>
+
+    <script src="./assets/vendor/modernizr-custom.js"></script>
+
+    <script>
+
+
+            // Perform Modernizr checks before loading the App module
+            if (!Modernizr.es6array || !Modernizr.generators || !Modernizr.es6math
+                    || !Modernizr.arrow || !Modernizr.es6number || !Modernizr.es6object
+                    || !Modernizr.es6collections || !Modernizr.promises
+                    || !Modernizr.es6string)
+            {
+                /*
+                 * window.location.replace(...) is better than using 
+                 * window.location.href, because replace() does not keep the 
+                 * originating page in the session history.
+                 */
+                window.location.replace("unsupported.html");
+            } else {
+                /* 
+                 * If the checks pass, dynamically load the App module using 
+                 * traditional coding. Do not use string interpolation as it is 
+                 * also part of ES6.
+                 */
+                var script = document.createElement('script');
+                script.type = 'module';
+                script.src = './assets/js/App.js';
+                document.head.appendChild(script);
+            }
+        
+
+
+
+    </script>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- <script type="module" src="./assets/js/App.js"></script> -->
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#home">
+            <span class="fw-bold" style="color: #ef476f; font-size: larger"
+              >PokePark</span
+            >
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#recipes">Recipes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#delivery">Your Bowl</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#social">Social</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="intro-section">
+      <div class="container">
+        <div class="intro-wrap half-width">
+          <div class="intro-title">
+            <h1>
+              Fast. Fresh. Flavorful.
+              <span class="span-color">Poke Perfection.</span>
+            </h1>
+            <p>
+              A poke bowl is a Hawaiian dish that typically consists of rice,
+              fresh raw fish, and a variety of delicious toppings like avocado,
+              seaweed, and edamame. It's a healthy, customizable meal that's as
+              visually appealing as it is tasty. Whether you're looking for a
+              nutritious lunch, a quick dinner, or just a snack packed with
+              fresh ingredients, PokePark has you covered. With our commitment
+              to sustainable fishing and locally sourced produce, we ensure
+              every bowl is both environmentally friendly and bursting with
+              flavor.
+            </p>
+            <a href="#recipes" class="link-button">Order Food</a>
+          </div>
+
+          <div class="intro-img">
+            <img src="./assets/images/poke-bowl.png" alt="Poke Bowl" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container half-width">
+        <div class="about-img">
+          <img src="./assets/images/ingredients.jpg" alt="Team" />
+        </div>
+
+        <div class="about-title">
+          <h2>About Us</h2>
+          <p>
+            PokePark was founded with a mission to bring the vibrant and healthy
+            flavors of Hawaii to the world. Over the past 2 years, we've
+            perfected our craft, offering the freshest ingredients and unique
+            combinations in our poke bowls. Every bowl we serve represents our
+            passion for excellence and our dedication to delighting every
+            customer. Join us as we continue to spread the aloha spirit with
+            every delicious creation we serve!
+          </p>
+          <a href="#social" class="link-button">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="recipes" class="recipie-section">
+      <div class="container">
+        <div class="recipie-header">
+          <h1>Our <span>Recipes</span></h1>
+          <p>
+            Poke bowls bring people together through their endless
+            customizability and fresh flavors. Explore our favorite combinations
+            below. Every recipe at PokePark is thoughtfully crafted to deliver a
+            balance of taste, nutrition, and satisfaction. Whether you're a fan
+            of classic flavors or adventurous enough to try something new, our
+            menu has something for everyone.
+          </p>
+        </div>
+
+        <div class="recipie-wrap">
+          <div class="recipie-box">
+            <img src="./assets/images/burrito.png" alt="Burrito" />
+            <h2>Poke Burrito</h2>
+            <p>
+              A veggie poke bowl is packed with ingredients like fresh cucumber,
+              avocado, seaweed, and salmon. It's a perfect option for
+              plant-based eaters. The burrito version adds a layer of
+              convenience, allowing you to enjoy your poke bowl on the go
+              without sacrificing taste or texture.
+            </p>
+          </div>
+          <div class="recipie-box">
+            <img src="./assets/images/salmon-bowl.png" alt="Salmon Poke Bowl" />
+            <h2>Salmon Poke Bowl</h2>
+            <p>
+              Fresh salmon marinated in soy sauce and sesame oil pairs
+              beautifully with rice, edamame, and avocado in this customer
+              favorite. The dish combines the richness of salmon with the
+              refreshing crunch of vegetables for a meal that's both indulgent
+              and light for any of our customers.
+            </p>
+          </div>
+          <div class="recipie-box">
+            <img src="./assets/images/tuna-bowl.png" alt="Tuna Poke Bowl" />
+            <h2>Tuna Poke Bowl</h2>
+            <p>
+              Our classic tuna poke bowl features sushi-grade tuna, a savory
+              marinade, and colorful toppings for a balanced, mouthwatering
+              meal. It's the perfect choice for seafood lovers who appreciate
+              the natural taste of premium fish. It is also our chef's go-to
+              bowl, and his specialty!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery" class="delivery-section">
+      <div class="container">
+        <h2>Customize Your Poke Bowl</h2>
+        <form id="poke-bowl-form">
+          <fieldset>
+            <div class="container">
+              <!-- Selects will be dynamically inserted here -->
+              <div id="div-selects" class="container-item"></div>
+    
+              <!-- Bowl Image Preview -->
+              <div id="preview-container">
+               
+              </div>
+    
+              <!-- Go to Checkout Button -->
+              <div class="text-center mt-4">
+                <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    
+
+    <section id="social" class="social-section">
+      <div class="container">
+        <div class="social-wrap half-width">
+          <div class="icon-box">
+            <div class="social-box">
+              <h1>
+                <a href="https://github.com/michaelgeljic"
+                  ><i class="fab fa-github-alt"></i
+                ></a>
+              </h1>
+            </div>
+            <div class="social-box">
+              <h1>
+                <a href="https://www.instagram.com/michaelgeljic/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </h1>
+            </div>
+
+            <div class="social-box">
+              <h1>
+                <a href="mailto:mg3178@g.rit.edu"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+              </h1>
+            </div>
+            <div class="social-box">
+              <h1>
+                <a href="https://www.linkedin.com/in/michaelgeljic/"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </h1>
+            </div>
+          </div>
+
+          <div class="social-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89016.14663773071!2d15.858407926931037!3d45.79614423510107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6700d914d87%3A0x4fa46297e452fb1c!2sRIT%20Croatia%20Zagreb!5e0!3m2!1sen!2shr!4v1737893990935!5m2!1sen!2shr"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h1>PokePark</h1>
+      <p>
+        Eat fresh, live healthy. A poke bowl a day keeps the stress away!
+        Experience the perfect combination of taste and well-being with every
+        bite. From our bowls to your table, happiness starts here.
+      </p>
+      <span> &copy; 2025 All Rights Reserved By Michael Geljic</span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
