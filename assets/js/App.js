@@ -24,12 +24,7 @@ class App {
             let page = pageMatch[0];
 
             switch (page) {
-                /**
-                 * Initializes the Poke Bowl customization page.
-                 */
-                case "index.html":
-                    new PokeBowlController(new PokeBowlModel(selectData), new PokeBowlView());
-                    break;
+                
 
                 /**
                  * Initializes the Checkout page.
@@ -37,6 +32,15 @@ class App {
                 case "checkout.html":
                     new CheckoutController(new CheckoutModel(checkoutData), new CheckoutView());
                     break;
+
+                    /**
+                 * Initializes the Poke Bowl customization page.
+                 */
+                
+                default:
+                    new PokeBowlController(new PokeBowlModel(selectData), new PokeBowlView());
+                    break;
+
             }
         }
     }
