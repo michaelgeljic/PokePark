@@ -48,7 +48,7 @@ class App {
 
       default:
         // Optionally handle invalid or undefined paths
-        console.log("Page not found");
+        console.log("Page not found...");
     }
   }
 }
