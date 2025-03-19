@@ -14,34 +14,30 @@ import { checkoutData } from "./data/checkoutData.js";
 class App {
     /**
      * Creates an instance of the App class.
-     * Detects the current page and initializes the appropriate controller, model, and view.
+     * Detects the current page path and initializes the appropriate controller, model, and view.
      */
     constructor() {
-        let url = window.location.href;
-        let pageMatch = url.match(/[a-z]+.html/);
+        let path = window.location.pathname;
 
-        if (pageMatch) {
-            let page = pageMatch[0];
+        // Check the path to load the appropriate controller/view
+        switch (path) {
+            /**
+             * Initializes the Poke Bowl customization page (this corresponds to '/').
+             */
+            case "/":
+                new PokeBowlController(new PokeBowlModel(selectData), new PokeBowlView());
+                break;
 
-            switch (page) {
-                
-
-                /**
-                 * Initializes the Checkout page.
-                 */
-                case "checkout.html":
-                    new CheckoutController(new CheckoutModel(checkoutData), new CheckoutView());
-                    break;
-
-                    /**
-                 * Initializes the Poke Bowl customization page.
-                 */
-                
-                default:
-                    new PokeBowlController(new PokeBowlModel(selectData), new PokeBowlView());
-                    break;
-
-            }
+            /**
+             * Initializes the Checkout page (this corresponds to '/checkout').
+             */
+            case "/checkout":
+                new CheckoutController(new CheckoutModel(checkoutData), new CheckoutView());
+                break;
+            
+            default:
+                // Optionally handle invalid or undefined paths
+                console.log("Page not found");
         }
     }
 }
