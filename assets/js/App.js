@@ -25,13 +25,14 @@ class App {
              * Initializes the Poke Bowl customization page (this corresponds to '/').
              */
             case "/":
+            case "PokePark":
                 new PokeBowlController(new PokeBowlModel(selectData), new PokeBowlView());
                 break;
 
             /**
              * Initializes the Checkout page (this corresponds to '/checkout').
              */
-            case "/checkout":
+            case "PokePark/checkout":
                 new CheckoutController(new CheckoutModel(checkoutData), new CheckoutView());
                 break;
             
