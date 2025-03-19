@@ -18,6 +18,7 @@ class App {
      */
     constructor() {
         let path = window.location.pathname;
+        console.log("Current Path:", path);
 
         // Check the path to load the appropriate controller/view
         switch (path) {
@@ -25,7 +26,8 @@ class App {
              * Initializes the Poke Bowl customization page (this corresponds to '/').
              */
             case "/":
-            case "PokePark":
+            case "PokePark/":
+                console.log("Loading PokeBowl index...");
                 new PokeBowlController(new PokeBowlModel(selectData), new PokeBowlView());
                 break;
 
