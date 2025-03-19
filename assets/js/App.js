@@ -12,39 +12,45 @@ import { checkoutData } from "./data/checkoutData.js";
  * Initializes the application and determines which controller to use based on the current page.
  */
 class App {
-    /**
-     * Creates an instance of the App class.
-     * Detects the current page path and initializes the appropriate controller, model, and view.
-     */
-    constructor() {
-        let path = window.location.pathname.toLowerCase();
-        console.log("Current Path:", path);
+  /**
+   * Creates an instance of the App class.
+   * Detects the current page path and initializes the appropriate controller, model, and view.
+   */
+  constructor() {
+    let path = window.location.pathname.toLowerCase();
+    console.log("Current Path:", path);
 
-        // Check the path to load the appropriate controller/view
-        switch (path) {
-            /**
-             * Initializes the Poke Bowl customization page (this corresponds to '/').
-             */
-            case "/":
-            case "/pokepark/":
-                console.log("Loading PokeBowl index...");
-                new PokeBowlController(new PokeBowlModel(selectData), new PokeBowlView());
-                break;
+    // Check the path to load the appropriate controller/view
+    switch (path) {
+      /**
+       * Initializes the Poke Bowl customization page (this corresponds to '/').
+       */
+      case "/":
+      case "/pokepark/":
+        console.log("Loading PokeBowl index...");
+        new PokeBowlController(
+          new PokeBowlModel(selectData),
+          new PokeBowlView()
+        );
+        break;
 
-            /**
-             * Initializes the Checkout page (this corresponds to '/checkout').
-             */
-            case "/checkout.html":
-            case "/pokepark/checkout.html":
+      /**
+       * Initializes the Checkout page (this corresponds to '/checkout').
+       */
+      case "/checkout.html":
+      case "/pokepark/checkout.html":
+        console.log("Loading Checkout page...");
+        new CheckoutController(
+          new CheckoutModel(checkoutData),
+          new CheckoutView()
+        );
+        break;
 
-                new CheckoutController(new CheckoutModel(checkoutData), new CheckoutView());
-                break;
-            
-            default:
-                // Optionally handle invalid or undefined paths
-                console.log("Page not found");
-        }
+      default:
+        // Optionally handle invalid or undefined paths
+        console.log("Page not found");
     }
+  }
 }
 
 // Instantiate the application
